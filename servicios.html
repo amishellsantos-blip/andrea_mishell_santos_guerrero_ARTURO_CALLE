@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arturo Calle | Nuestros Servicios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">ARTURO CALLE</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: sub; margin-right: 5px;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Inicio
+                </a></li>
+                <li><a href="servicios.html" class="active">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: sub; margin-right: 5px;"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> Servicios
+                </a></li>
+                <li><a href="contacto.html">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: sub; margin-right: 5px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Contacto
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="services-intro">
+                <h1>Nuestros Servicios</h1>
+                <p>Arturo Calle ofrece una amplia gama de productos y servicios diseñados para todos, incluyendo ropa formal, casual, accesorios y asesoría de imagen para hombres y mujeres.</p>
+            </div>
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Colección de Ropa Formal">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Línea Formal</h3>
+                        <p>Trajes a medida, camisas de vestir y conjuntos elegantes para impactar en cualquier ocasión profesional o social.</p>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Colección de Ropa Casual">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Línea Casual</h3>
+                        <p>Comodidad superior. Prendas versátiles diseñadas para el dinamismo del día a día sin sacrificar estilo.</p>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Colección de Mujer">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Colección Mujer</h3>
+                        <p>Diseños modernos y sofisticados que resaltan la elegancia femenina bajo el sello de calidad de Arturo Calle.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="services-footer">
+                <p>Nuestros clientes pueden disfrutar de prendas de alta calidad, atención personalizada y colecciones diseñadas con las últimas tendencias del mercado global.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/arturocalleoficial/" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.instagram.com/arturocalleoficial/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://x.com/Arturo_Calle" target="_blank" rel="noopener">Twitter</a>
+        </div>
+        <p>&copy; 2026 Arturo Calle. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) {
+                header.classList.remove('header-hidden');
+                return;
+            }
+            if (currentScroll > lastScroll && currentScroll > 150) {
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
